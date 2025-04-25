@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boRed{ border: 1px solid red;}
+        .boBlue{ border: 1px solid blue;}
+        .boBlack{ border: 1px solid black;}
+        .box21{ width: 200px; height: 100px;}
+    </style>
+</head>
+<body>
+    <!--
+    line-height : 줄간격 설정을 위한 속성. 즉 라인사이의 간격을 띄우는데
+        블럭과 인라인은 조금 다르게 적용된다.
+        -블럭 엘리먼트 : 컨텐츠의 영역 중 세로 영역이 늘어나서 마치 줄간격이
+            생기는것처럼 보인다.
+        -인라인 엘리먼트 : 컨텐츠의 영역은 변화가 없고, 지정된 크기만큼
+            줄간격이 생겨 벌어진다.
+        따라서 같은 값을 주더라도 조금 다른것을 볼 수 있다.
+    -->
+    <style>
+        .divLine > div {
+            border: 1px solid blue;
+        }
+        .divLine > div:first-child {
+            line-height: 4em;
+        }
+    </style>
+    <h2>줄간격 - 블럭엘리먼트</h2>
+    <div class="divLine">
+        <div>블럭엘리먼트1에 줄간격 적용</div>
+        <div>블럭엘리먼트2</div>
+        <div>블럭엘리먼트3</div>
+    </div>
+    <style>
+        .inline > span {
+            border: 1px solid black;
+        }
+        .inline > span:first-child {
+            line-height: 4em;
+        }
+    </style>
+    <h2>줄간격 - 인라인엘리먼트</h2>
+    <div class="inline">
+        <span>인라인엘리먼트1에 줄간격 적용</span><br>
+        <span>인라인엘리먼트2</span><br>
+        <span>인라인엘리먼트3</span>
+    </div>
+    
+    <h2>배분정렬</h2>
+    <!--
+    배분정렬 : 각기 다른 길이의 단어를 사용함으로써 발생되는 우측의 불규칙적인
+        여백을 깔끔하게 정리해준다. 
+    -->
+    <p style="text-align: justify;" class="boBlack">
+        국가안전보장회의는 대통령이 주재한다. 공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 대통령은 취임에 즈음하여 다음의 선서를 한다.
+         <br><br>
+        국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된 때에는 그러하지 아니하다.
+        근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다.
+        <br><br>
+        국가안전보장회의는 대통령이 주재한다. 공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 대통령은 취임에 즈음하여 다음의 선서를 한다.
+         <br><br>
+        국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된 때에는 그러하지 아니하다.
+        근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다.
+    </p>
+
+
+
+    <h2>들여쓰기</h2>
+    <!--
+    블럭 엘리먼트는 가로 길이가 100%이므로 공간이 충분하여 text-indent를 통해
+    들여쓰기를 할 수 있다. -->
+    <div style="text-indent: 2em;" class="boBlue">
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+    </div>
+    <!--
+    인라인엘리먼트는 공간이 없으므로 부모에서 패딩을 통해 우측으로 밀어줘야
+    한다. -->
+    <div style="padding-left: 30px;" class="boRed">
+        <span style="text-indent: 50em;" class="boBlack">
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+        </span>
+    </div>
+</body>
+</html>
