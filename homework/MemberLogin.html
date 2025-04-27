@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 화면</title>
+    <style>
+
+        body {
+        background-color: #f0f0f0;
+        font-family: '맑은 고딕', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .login-container {
+        background: #fff;
+        padding: 30px;
+        border: 1px solid #ccc;
+        text-align: center;
+        width: 500px;
+        }
+
+        .logo {
+        width: 200px;
+        margin-bottom: 20px;
+        }
+
+        table {
+            align-items: center;
+            padding-left: 50px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+        width: 250px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        .login-bottom {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        }
+
+        .bottom-img {
+        width: 180px;
+        margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="./로그인-리소스/login_logo.gif" alt="로그인 로고" class="logo">
+    
+        <form class="login-form">
+            <table>
+                <tr>
+                    <td><input type="text" placeholder="아이디" required></td>
+                    <td rowspan="2"><img src="./로그인-리소스/login_bt.gif" alt="로그인"></td>
+                </tr>
+                <tr>
+                    <td><input type="password" placeholder="●●●●" required></td>
+                    <!-- <td></td> -->
+                </tr>
+            </table>
+    
+          <div class="login-bottom">
+            <img src="./로그인-리소스/login_member.gif" alt="회원가입" class="bottom-img">
+            <img src="./로그인-리소스/login_idpw.gif" alt="아이디/비밀번호 찾기" class="bottom-img">
+          </div>
+        </form>
+      </div>
+</body>
+</html>
