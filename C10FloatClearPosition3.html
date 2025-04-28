@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* 스티커처럼 상단에 box를 붙일때 사용한다. */
+        div.sticky {
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0; padding: 10px; text-align: center;
+            background-color: #cae8ca;
+            border: 2px solid #4CAF50;
+        }
+        /*
+        한국에서 주로 사용하는 크롬, 엣지와 외국에서 사용하는 오페라,
+        사파리 등의 웹 브라우저는 서로 사용하는 엔진이 달라 같은 CSS속성
+        이라도 다르게 표현될 수 있다.
+        크로스 브라우징을 위해 몇가지 접두어가 존재하는데
+        -webkit- : 구글 크롬, 사파리 브라우저에 적용
+        -moz- : 파이어폭스에 적용
+        -ms- : 익스플로러. 현재는 거의 사용하지 않음
+        -o- : 오페라에 적용
+        */
+    </style>
+    <p>스티키 상단 영역</p>
+
+    <div class="sticky">sticky 박스</div>
+
+    <div>
+        <p>
+            고양이(학명: Felis catus 펠리스 카투스)는
+             식육목 고양이과에 속하는 포유류이다.
+              집고양이의 기원은 약 1만년 전 중동 지역에서
+               스스로 숲속을 나와 사람들이 모여사는 마을에 정착하여
+                길들여진 아프리카들고양이(학명: Felis lybica)로 추측된다.
+        </p>
+        <p style="margin-top: 1000px;">
+            최근 고고학과 유전학의 발전에 따르면 고양이의 가축화는
+             기원전 7500년경 근동 지역에서 발생했다.
+              일반적으로 집에서 키우는 반려동물이나
+               농장 고양이로 사육되지만, 사람과의 접촉을 피하여
+                야생 고양이로 자유롭게 돌아다니기도 한다.
+                 인간은 우정과 해충을 죽이는 능력을 높이 평가한다. 
+        </p>
+    </div>
+
+    <style>
+        /*
+        fixed 속성값은 웹브라우저의 특정 위치에 레이어를 고정하고 싶을때
+        사용한다. 해당 속성이 적용되면 스크롤에 영향을 받지 않는다. 단위
+        입력시 0인 경우에는 px를 생략할 수 있다.
+        */
+        div.fixed {
+            position: fixed;
+            /* 우측하단에 고정 */
+            bottom: 0; right: 0;
+            width: 200px; text-align: center;
+            height: 100px; line-height: 100px;
+            background-color: #cae8ca;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+
+    <div class="fixed">
+        fixed 박스
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
